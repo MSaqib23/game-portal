@@ -1,4 +1,5 @@
 
+import { Button } from '@chakra-ui/react'
 const App = () => {
   return (
     <div><button type="button" className="btn btn-primary">Primary</button>
@@ -10,7 +11,10 @@ const App = () => {
     <button type="button" className="btn btn-light">Light</button>
     <button type="button" className="btn btn-dark">Dark</button>
     
-    <button type="button" className="btn btn-link">Link</button></div>
+    <button type="button" className="btn btn-link">Link</button>
+    <Button colorScheme='blue'>Button</Button>
+    </div>
+
   )
 }
 
