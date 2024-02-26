@@ -1,19 +1,17 @@
 
-import { Button } from '@chakra-ui/react'
+import { Grid, GridItem, Show } from '@chakra-ui/react'
 const App = () => {
   return (
-    <div><button type="button" className="btn btn-primary">Primary</button>
-    <button type="button" className="btn btn-secondary">Secondary</button>
-    <button type="button" className="btn btn-success">Success</button>
-    <button type="button" className="btn btn-danger">Danger</button>
-    <button type="button" className="btn btn-warning">Warning</button>
-    <button type="button" className="btn btn-info">Info</button>
-    <button type="button" className="btn btn-light">Light</button>
-    <button type="button" className="btn btn-dark">Dark</button>
-    
-    <button type="button" className="btn btn-link">Link</button>
-    <Button colorScheme='blue'>Button</Button>
-    </div>
+    <Grid templateAreas={{
+      base:`"nav" "main"`,
+      lg:`"nav nav" "aside main"`
+    }}>
+      <GridItem area="nav" bg="coral">Nav</GridItem>
+      <Show above='lg'>
+      <GridItem area="aside" bg="gold">Aside</GridItem>
+      </Show>
+      <GridItem area="main" bg="dodgerblue">Nav</GridItem>
+    </Grid>
 
   )
 }
