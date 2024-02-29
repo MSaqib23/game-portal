@@ -15,7 +15,7 @@ const App = () => {
       }}>
       <GridItem area="nav" padding='10px'><NavBar/></GridItem>
       <Show above='lg'>
-      <GridItem area="aside" marginX='-14px' ><GenreList/></GridItem>
+      <GridItem area="aside"  ><GenreList/></GridItem>
       </Show>
       <GridItem area="main" >
         <GameGrid/>
