@@ -10,7 +10,8 @@ import { Platform } from './hooks/usePlatform'
 import SortDropdownList from './components/SortDropdownList'
 export interface GameQuery{
   genre: Genre | null,
-  platform:Platform | null
+  platform: Platform | null,
+  sortOrder: string
 }
 const App = () => {
   const [gameQuery,setGameQuery] = useState<GameQuery>({} as GameQuery);
@@ -30,7 +31,7 @@ const App = () => {
       <GridItem area="main">
         <HStack spacing={5} paddingLeft={2} marginBottom={5}>
         <PlatformDropdwonList selectedPlatform={gameQuery.platform} onSelectPlatform={(platform) => setGameQuery({ ...gameQuery, platform })} />
-          <SortDropdownList />
+          <SortDropdownList selectedSortOrder={gameQuery.sortOrder} onSelectSortOrder={(sortOrder) => setGameQuery({ ...gameQuery, sortOrder })} />
           </HStack>
         <GameGrid gameQuery={gameQuery} />
       </GridItem>
