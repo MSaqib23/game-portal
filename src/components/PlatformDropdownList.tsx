@@ -6,7 +6,7 @@ interface Props{
     onSelectPlatform: (platform: Platform) => void;
     selectedPlatform: Platform | null;
 }
-const PlatformDropdwonList = ({selectedPlatform,onSelectPlatform}:Props) => {
+const PlatformDropdownList = ({selectedPlatform,onSelectPlatform}:Props) => {
     const { data, error } = usePlatform();
     { if (error) return null; }
   return (
@@ -19,4 +19,4 @@ const PlatformDropdwonList = ({selectedPlatform,onSelectPlatform}:Props) => {
   )
 }
 
-export default PlatformDropdwonList
+export default PlatformDropdownList
