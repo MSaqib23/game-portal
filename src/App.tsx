@@ -18,7 +18,7 @@ const App = () => {
       }}>
       <GridItem area="nav" padding='10px'><NavBar/></GridItem>
       <Show above='lg'>
-        <GridItem area="aside"  ><GenreList onSelectedGenres={(genre)=>setSelectedGenre(genre) } /></GridItem>
+        <GridItem area="aside"  ><GenreList selectedGenre={selectedGenre} onSelectedGenres={(genre)=>setSelectedGenre(genre) } /></GridItem>
       </Show>
       <GridItem area="main">
         <GameGrid selectedGenre={selectedGenre}/>
