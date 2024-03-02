@@ -24,7 +24,7 @@ const App = () => {
     }}
       templateColumns={{
         base: '1fr',
-        lg:'200px 1fr'
+        lg:'180px 1fr'
       }}>
       <GridItem area="nav" padding='10px'><NavBar onSearch={(searchText) => setGameQuery({ ...gameQuery, searchText }) } /></GridItem>
       <Show above='lg'>
