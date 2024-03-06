@@ -14,7 +14,7 @@ const GenreList = ({selectedGenre,onSelectedGenres}:Props) => {
         <>
       <Heading fontSize='2xl' paddingX={5}>Genres</Heading>
     <List >
-        {data.map(gen=><ListItem key={gen.id} paddingY='5px' >
+        {data?.results.map(gen=><ListItem key={gen.id} paddingY='5px' >
         <HStack marginX={-3}>
             <Image boxSize='32px' objectFit="cover" borderRadius={8} src={getCroppedImage(gen.image_background)}/>
                 <Button whiteSpace='normal' textAlign='left' fontWeight={gen.id==selectedGenre?.id?'bold':'normal'}  variant='link' fontSize='10md' onClick={()=>onSelectedGenres(gen)}>{gen.name}</Button>
