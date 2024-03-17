@@ -1,10 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
-import Layout from "./services/pages/Layout";
-import HomePage from "./services/pages/HomePage";
-import GameDetailPage from "./services/pages/GameDetailPage";
-import ErrorPage from "./services/pages/ErrorPage";
-import LoginPage from "./services/pages/LoginPage";
-import PrivateRoutes from "./services/pages/PrivateRoutes";
+import { lazy } from "react";
+
+const HomePage = lazy(() => import("./services/pages/HomePage"));
+const GameDetailPage = lazy(() => import("./services/pages/GameDetailPage"));
+const ErrorPage = lazy(() => import("./services/pages/ErrorPage"));
+const PrivateRoutes = lazy(() => import("./services/pages/PrivateRoutes"));
+const Layout = lazy(() => import("./services/pages/Layout"));
+const LoginPage = lazy(() => import("./services/pages/LoginPage"));
 
 const router=createBrowserRouter([
     {

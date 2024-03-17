@@ -1,7 +1,8 @@
 import { Navigate, Outlet } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import NavBar from "../../components/NavBar";
-import { Box } from "@chakra-ui/react";
+import { Box, Spinner } from "@chakra-ui/react";
+import { Suspense } from "react";
 
 const PrivateRoutes = () => {
     const { user } = useAuth();
@@ -10,8 +11,11 @@ const PrivateRoutes = () => {
     return (
         <>
             <NavBar />
+            
             <Box padding={0}>
-              <Outlet />
+                <Suspense fallback={<Spinner/>}>
+                    <Outlet />
+                </Suspense>
           </Box>
             </>
     );
