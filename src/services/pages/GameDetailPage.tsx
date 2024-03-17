@@ -11,7 +11,7 @@ const GameDetailPage = () => {
     const { data: game, isLoading, error } = useGameDetail(slug!);
     
     if (isLoading) return <Spinner />;
-    if (error || !game) throw error;
+    if (error || !game) return null;
   return (
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={5}>
           <GridItem>

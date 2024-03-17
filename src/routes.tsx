@@ -22,6 +22,7 @@ const router=createBrowserRouter([
     },
     {
         element: <PrivateRoutes />,
+        errorElement:<ErrorPage/>,
         children: [
             {
                 index: true,

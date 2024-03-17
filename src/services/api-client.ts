@@ -28,7 +28,8 @@ class APICLIENT<T>{
 
     get = (id: string | number) => {
         return axiosInstance.get<T>(this.endpoint+'/'+id)
-            .then(res => res.data);
+            .then(res => res.data)
+            .catch(err=>err);
     }
 }
 
