@@ -5,7 +5,7 @@ import { Suspense } from "react"
 const Layout = () => {
   return (
       <>
-          <Box padding={0}>
+          <Box padding={3}>
               <Suspense fallback={<Spinner/>}>
                   <Outlet />
             </Suspense>

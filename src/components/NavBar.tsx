@@ -6,12 +6,12 @@ import { Link } from 'react-router-dom'
 
 const NavBar = () => {
   return (
-    <HStack p={3}  >
+    <HStack paddingX={3}  >
       <Link to={'/'}>
-        <Image src={logo} boxSize='60px' objectFit='cover'></Image>
+        <Image src={logo} boxSize='80px' objectFit='contain' />
       </Link>
       <SearchInput  />
-        <ColorModeSwitch/>  
+      <ColorModeSwitch/>  
     </HStack>
 
   )

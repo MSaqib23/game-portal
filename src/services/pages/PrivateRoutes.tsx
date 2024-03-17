@@ -12,7 +12,7 @@ const PrivateRoutes = () => {
         <>
             <NavBar />
             
-            <Box padding={0}>
+            <Box padding={3}>
                 <Suspense fallback={<Spinner/>}>
                     <Outlet />
                 </Suspense>
